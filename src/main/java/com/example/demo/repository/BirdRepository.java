@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 import com.example.demo.model.Bird;
 import org.springframework.data.jdbc.repository.query.Query;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 

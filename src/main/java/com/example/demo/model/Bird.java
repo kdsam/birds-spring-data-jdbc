@@ -1,8 +1,12 @@
 package com.example.demo.model;
 
+import com.querydsl.core.annotations.QueryEntity;
 import org.springframework.data.annotation.Id;
 
-public class Bird {
+import java.io.Serializable;
+
+@QueryEntity
+public class Bird implements Serializable {
 
     @Id
     private Long id;
@@ -15,6 +19,10 @@ public class Bird {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Bird() {
+
     }
 
     public Bird(String name, String breed){

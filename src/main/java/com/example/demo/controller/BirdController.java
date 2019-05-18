@@ -27,4 +27,9 @@ public class BirdController {
     public Page<Bird> listBirdsPaged(Pageable pageable){
         return birdService.findAllBirdsPaged(pageable);
     }
+
+    @GetMapping("/breed")
+    public List<Bird> listBirdsWithBreed(String breed){
+        return birdService.findAllBirdsWithPredicate(breed);
+    }
 }
